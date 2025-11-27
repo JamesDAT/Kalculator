@@ -43,4 +43,8 @@ class FunctionOp : public ASTNode {
     std::unique_ptr<ASTNode> Parameter;
 };
 
+class Number : public ASTNode {
+    int value;
+};
+
 #endif // ASTNODE_H

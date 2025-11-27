@@ -5,6 +5,7 @@
 #include <memory>
 #include <string_view>
 #include "ASTNode.h"
+#include "equationlexer.h"
 
 class TreeBuilder
 {
@@ -12,10 +13,12 @@ public:
     TreeBuilder();
     ~TreeBuilder();
 
-    void InsertNode(const char character);
-    void ParseEquation(const std::string_view equation);
+    void CreateTree(const std::string_view equation);
+
 private:
     QVector<std::unique_ptr<ASTNode>> m_baseNodes;
+
+    EquationLexer m_lexer;
 };
 
 #endif // TREEBUILDER_H
