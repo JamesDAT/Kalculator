@@ -17,6 +17,8 @@ qt_add_qml_module(appKalculator
     VERSION 1.0
     QML_FILES
         Main.qml
+        SOURCES equation/ASTNode.h
+        SOURCES equation/treebuilder.h equation/treebuilder.cpp
 )
 
 # Qt for iOS sets MACOSX_BUNDLE_GUI_IDENTIFIER automatically since Qt 6.1.
